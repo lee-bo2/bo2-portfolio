@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>롯데ON — 이보희 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Pretendard','system-ui','sans-serif']}}}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;word-break:keep-all}
+    :root{--bg:#080808;--s1:#111;--s2:#1a1a1a;--b1:#222;--b2:#303030;--t1:#f0f0f0;--t2:#888;--t3:#444}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--t1);font-family:'Pretendard',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    .fade-up{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+    .fade-up.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}
+    hr.rule{border:none;border-top:1px solid var(--b1);margin:0}
+    .num{font-size:.72rem;font-weight:500;color:var(--t3);letter-spacing:.1em}
+    .tag{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .8rem;border-radius:999px;border:1px solid var(--b2);color:var(--t2);font-size:.75rem;font-weight:500}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.4rem;border:1px solid var(--b2);color:var(--t2);border-radius:.5rem;font-weight:600;font-size:.88rem;transition:border-color .2s,color .2s}
+    .btn-ghost:hover{border-color:var(--t2);color:var(--t1)}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+    body::after{content:'';position:fixed;inset:0;z-index:99;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");background-size:300px;opacity:.45}
+    .metric-card{padding:1.5rem;background:var(--s1);border:1px solid var(--b1);border-radius:.75rem}
+    .process-step{position:relative;padding-left:2rem}
+    .process-step::before{content:attr(data-n);position:absolute;left:0;top:0;font-size:.7rem;font-weight:700;color:var(--t3);letter-spacing:.05em}
+  </style>
+</head>
+<body>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b" style="border-color:var(--b1);background:rgba(8,8,8,.88);backdrop-filter:blur(16px)">
+  <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-2 text-sm" style="color:var(--t2)">
+      <iconify-icon icon="solar:arrow-left-linear" width="16"></iconify-icon>이보희<span style="color:var(--t3);">LEEBOHEE</span>
+    </a>
+    <div class="flex items-center gap-4" style="color:var(--t3);font-size:.8rem">
+      <span>03 / 05</span>
+      <a href="ibk-bank.html" class="hover:text-white transition-colors">다음 프로젝트 →</a>
+    </div>
+  </div>
+</header>
+
+<section class="pt-32 pb-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="num">03</span>
+      <span class="tag">E-Commerce UX</span>
+      <span class="tag">통합 전략</span>
+      <span class="tag">AS-IS / TO-BE</span>
+    </div>
+    <h1 class="text-[clamp(2.5rem,8vw,5.5rem)] font-bold tracking-tighter leading-none mb-6" style="color:var(--t1)">
+      롯데ON
+    </h1>
+    <p class="text-xl leading-relaxed max-w-[52ch] mb-10" style="color:var(--t2)">
+      분리된 7개 롯데 커머스 채널을 하나의 통합 UX로. AS-IS 현황 분석부터
+      O2O·개인화·비디오커머스를 포함한 TOBE 설계까지 전 과정을 담당했습니다.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px" style="background:var(--b1)">
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">클라이언트</div><div class="text-sm font-semibold" style="color:var(--t1)">롯데</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">기간</div><div class="text-sm font-semibold" style="color:var(--t1)">2019–2021</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">역할</div><div class="text-sm font-semibold" style="color:var(--t1)">UI/UX·BX Designer</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">소속</div><div class="text-sm font-semibold" style="color:var(--t1)">Regular Bold</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- AS-IS / TO-BE 다이어그램 -->
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="rounded-2xl overflow-hidden" style="background:var(--s1);border:1px solid var(--b1)">
+      <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+        <defs>
+          <pattern id="bg-g3" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a1a1a" stroke-width=".6"/></pattern>
+        </defs>
+        <rect width="900" height="360" fill="url(#bg-g3)"/>
+
+        <!-- AS-IS: 7개 분리 채널 -->
+        <text x="200" y="38" text-anchor="middle" fill="#444" font-size="11" font-family="Pretendard,sans-serif">AS-IS — 파편화된 7개 채널</text>
+        <!-- 채널 박스들 -->
+        <rect x="30" y="52" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="38" y="62" width="40" height="5" rx="2.5" fill="#333"/>
+        <rect x="38" y="70" width="28" height="4" rx="2" fill="#252525"/>
+        <rect x="118" y="52" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="126" y="62" width="44" height="5" rx="2.5" fill="#333"/>
+        <rect x="126" y="70" width="30" height="4" rx="2" fill="#252525"/>
+        <rect x="206" y="52" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="214" y="62" width="36" height="5" rx="2.5" fill="#333"/>
+        <rect x="214" y="70" width="26" height="4" rx="2" fill="#252525"/>
+        <rect x="30" y="96" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="38" y="106" width="42" height="5" rx="2.5" fill="#333"/>
+        <rect x="38" y="114" width="30" height="4" rx="2" fill="#252525"/>
+        <rect x="118" y="96" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="126" y="106" width="38" height="5" rx="2.5" fill="#333"/>
+        <rect x="126" y="114" width="26" height="4" rx="2" fill="#252525"/>
+        <rect x="206" y="96" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="214" y="106" width="44" height="5" rx="2.5" fill="#333"/>
+        <rect x="214" y="114" width="32" height="4" rx="2" fill="#252525"/>
+        <rect x="118" y="140" width="80" height="34" rx="6" fill="#161616" stroke="#252525" stroke-width="1"/>
+        <rect x="126" y="150" width="40" height="5" rx="2.5" fill="#333"/>
+        <rect x="126" y="158" width="28" height="4" rx="2" fill="#252525"/>
+        <!-- 문제점 표시 -->
+        <line x1="70" y1="86" x2="70" y2="96" stroke="#2a2a2a" stroke-width=".8" stroke-dasharray="3 2"/>
+        <line x1="158" y1="86" x2="158" y2="96" stroke="#2a2a2a" stroke-width=".8" stroke-dasharray="3 2"/>
+        <line x1="246" y1="86" x2="246" y2="96" stroke="#2a2a2a" stroke-width=".8" stroke-dasharray="3 2"/>
+
+        <!-- 분리선 (화살표) -->
+        <line x1="330" y1="110" x2="360" y2="110" stroke="#333" stroke-width="1.5"/>
+        <polygon points="358,106 366,110 358,114" fill="#333"/>
+
+        <!-- TO-BE: 통합 롯데ON -->
+        <text x="620" y="38" text-anchor="middle" fill="#888" font-size="11" font-family="Pretendard,sans-serif">TO-BE — 통합 롯데ON</text>
+        <!-- 중앙 허브 -->
+        <rect x="400" y="55" width="440" height="230" rx="12" fill="#0e0e0e" stroke="#222" stroke-width="1"/>
+        <!-- GNB -->
+        <rect x="400" y="55" width="440" height="22" rx="12" fill="#141414"/>
+        <rect x="400" y="68" width="440" height="9" fill="#141414"/>
+        <rect x="414" y="61" width="32" height="8" rx="3" fill="#e4e4e7" opacity=".85"/>
+        <rect x="490" y="63" width="18" height="5" rx="2" fill="#252525"/>
+        <rect x="512" y="63" width="18" height="5" rx="2" fill="#252525"/>
+        <rect x="534" y="63" width="18" height="5" rx="2" fill="#252525"/>
+        <rect x="556" y="63" width="18" height="5" rx="2" fill="#252525"/>
+        <rect x="790" y="62" width="40" height="7" rx="3.5" fill="#1e1e1e"/>
+        <!-- 히어로 -->
+        <rect x="400" y="77" width="440" height="52" fill="#111"/>
+        <rect x="414" y="87" width="80" height="9" rx="3" fill="#e4e4e7" opacity=".8"/>
+        <rect x="414" y="100" width="120" height="6" rx="2" fill="#444"/>
+        <rect x="414" y="112" width="50" height="12" rx="6" fill="#e4e4e7" opacity=".15" stroke="#e4e4e7" stroke-width=".8"/>
+        <rect x="680" y="81" width="150" height="44" rx="4" fill="#1a1a1a"/>
+        <!-- O2O / 개인화 / 비디오 블록 -->
+        <rect x="408" y="136" width="130" height="56" rx="8" fill="#141414" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="416" y="144" width="22" height="5" rx="2" fill="#252525"/>
+        <rect x="416" y="153" width="60" height="9" rx="3" fill="#e4e4e7" opacity=".6"/>
+        <rect x="416" y="167" width="44" height="5" rx="2" fill="#333"/>
+        <rect x="416" y="176" width="90" height="10" rx="5" fill="#1e1e1e"/>
+        <rect x="548" y="136" width="130" height="56" rx="8" fill="#141414" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="556" y="144" width="30" height="5" rx="2" fill="#252525"/>
+        <rect x="556" y="153" width="50" height="9" rx="3" fill="#e4e4e7" opacity=".6"/>
+        <rect x="556" y="167" width="40" height="5" rx="2" fill="#333"/>
+        <rect x="556" y="176" width="100" height="10" rx="5" fill="#1e1e1e"/>
+        <rect x="688" y="136" width="144" height="56" rx="8" fill="#141414" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="696" y="144" width="34" height="5" rx="2" fill="#252525"/>
+        <rect x="696" y="153" width="56" height="9" rx="3" fill="#e4e4e7" opacity=".6"/>
+        <rect x="696" y="167" width="48" height="5" rx="2" fill="#333"/>
+        <rect x="696" y="176" width="112" height="10" rx="5" fill="#1e1e1e"/>
+        <!-- 상품 리스트 -->
+        <rect x="408" y="200" width="420" height="72" rx="5" fill="#111" stroke="#1a1a1a" stroke-width=".6"/>
+        <rect x="416" y="208" width="8" height="8" rx="2" fill="#222"/>
+        <rect x="428" y="209" width="60" height="5" rx="2" fill="#252525"/>
+        <rect x="758" y="207" width="62" height="10" rx="5" fill="#1a1a1a"/>
+        <line x1="408" y1="222" x2="828" y2="222" stroke="#1a1a1a" stroke-width=".6"/>
+        <rect x="416" y="230" width="48" height="34" rx="4" fill="#1a1a1a"/>
+        <rect x="470" y="232" width="80" height="6" rx="3" fill="#252525"/>
+        <rect x="470" y="242" width="54" height="5" rx="2.5" fill="#333"/>
+        <rect x="470" y="252" width="36" height="8" rx="3" fill="#e4e4e7" opacity=".7"/>
+        <rect x="576" y="230" width="48" height="34" rx="4" fill="#1a1a1a"/>
+        <rect x="630" y="232" width="72" height="6" rx="3" fill="#252525"/>
+        <rect x="630" y="242" width="48" height="5" rx="2.5" fill="#333"/>
+        <rect x="630" y="252" width="36" height="8" rx="3" fill="#e4e4e7" opacity=".7"/>
+
+        <!-- 레이블 -->
+        <text x="473" y="204" fill="#444" font-size="9" font-family="Pretendard,sans-serif">O2O</text>
+        <text x="613" y="204" fill="#444" font-size="9" font-family="Pretendard,sans-serif">개인화</text>
+        <text x="750" y="204" fill="#444" font-size="9" font-family="Pretendard,sans-serif">Video Commerce</text>
+
+        <!-- 하단 레이블 -->
+        <text x="180" y="310" text-anchor="middle" fill="#333" font-size="11" font-family="Pretendard,sans-serif">색상·쿠폰·타이포·아이콘 파편화</text>
+        <text x="620" y="310" text-anchor="middle" fill="#555" font-size="11" font-family="Pretendard,sans-serif">Create Sensation — 통합 사용자 경험</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Problem</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 문제였나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        롯데는 롯데닷컴, 롯데마트, 롯데백화점, 롯데슈퍼 등 7개의 독립적인 커머스 채널을 운영하고 있었습니다.
+        각 채널은 서로 다른 색상 체계, 쿠폰 정책, 이미지 스타일, 아이콘, 타이포그래피를 사용해
+        사용자가 하나의 '롯데'를 경험하지 못하는 상황이었습니다.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 1</div><div class="text-sm font-semibold" style="color:var(--t1)">색상 파편화</div><div class="text-xs mt-1" style="color:var(--t2)">채널마다 다른 메인 컬러</div></div>
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 2</div><div class="text-sm font-semibold" style="color:var(--t1)">쿠폰 UI 비일관</div><div class="text-xs mt-1" style="color:var(--t2)">동일 쿠폰이 채널마다 다르게 표시</div></div>
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 3</div><div class="text-sm font-semibold" style="color:var(--t1)">이미지 스타일 혼재</div><div class="text-xs mt-1" style="color:var(--t2)">상품 이미지 촬영 기준 부재</div></div>
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 4</div><div class="text-sm font-semibold" style="color:var(--t1)">로고 오남용</div><div class="text-xs mt-1" style="color:var(--t2)">채널별 로고 사용 기준 미흡</div></div>
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 5</div><div class="text-sm font-semibold" style="color:var(--t1)">아이콘 파편화</div><div class="text-xs mt-1" style="color:var(--t2)">스타일이 다른 아이콘 혼재</div></div>
+        <div class="metric-card"><div class="text-xs mb-2" style="color:var(--t3)">문제점 6</div><div class="text-sm font-semibold" style="color:var(--t1)">타이포그래피 불통일</div><div class="text-xs mt-1" style="color:var(--t2)">폰트·크기·행간 기준 없음</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Process</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">어떻게 풀었나</h2>
+    </div>
+    <div class="space-y-8 fade-up d1">
+
+      <div class="process-step" data-n="01">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">AS-IS 현황 분석</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          7개 채널의 UI를 전수 분석하여 색상 체계, 쿠폰 디자인, 상품 이미지 가이드, 로고 사용,
+          아이콘 스타일, 타이포그래피를 항목별로 비교했습니다. 통일이 필요한 요소와
+          각 채널의 개성을 유지해야 할 요소를 분리하는 것이 첫 번째 과제였습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="02">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">통합 UX 전략 수립</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          "Create Sensation" — 감각을 창조한다 — 을 통합 UX의 핵심 슬로건으로 정의했습니다.
+          단순한 쇼핑 플랫폼을 넘어 개인화된 발견의 기쁨을 제공하는 경험을 설계 방향으로 삼았습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="03">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">TOBE 설계 — O2O · 개인화 · 비디오커머스</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          3개 축으로 TOBE를 설계했습니다. O2O: 오프라인 매장과 온라인 채널의 경험 연결.
+          개인화: 구매 이력과 관심사 기반의 큐레이션 피드. 비디오커머스: 라이브와 숏폼을 통한
+          감각적 상품 경험. 각 축에 대해 와이어프레임과 프로토타입을 제작하여 롯데 내부와 검증했습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="04">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">통합 UI 가이드라인 제작</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          색상 시스템, 타이포그래피, 아이콘, 쿠폰 UI 패턴, 이미지 촬영 기준을 통합 가이드라인으로 문서화했습니다.
+          각 채널이 독자성을 유지하면서도 '롯데ON'이라는 하나의 브랜드로 인식될 수 있는 균형점을 찾는 것이 핵심이었습니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Outcome</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 달라졌나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        파편화된 7개 채널이 롯데ON이라는 단일 통합 커머스 플랫폼의 기반을 마련했습니다.
+        이 프로젝트에서 수립한 통합 UX 전략과 가이드라인은 롯데ON 공식 런칭의 초석이 됐습니다.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">7 → 1</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">채널 통합</div>
+          <div class="text-xs" style="color:var(--t2)">분리된 7개 채널을 단일 플랫폼으로</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">3축</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">TOBE 전략</div>
+          <div class="text-xs" style="color:var(--t2)">O2O · 개인화 · 비디오커머스</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">전체</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">통합 가이드라인</div>
+          <div class="text-xs" style="color:var(--t2)">6개 항목 UI 표준화 완성</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div>
+      <div class="text-xs mb-2" style="color:var(--t3)">다음 프로젝트</div>
+      <div class="text-xl font-bold" style="color:var(--t1)">IBK i-ONE Bank — 풀 뱅킹 UX 개선</div>
+    </div>
+    <a href="ibk-bank.html" class="btn-ghost whitespace-nowrap">
+      자세히 보기
+      <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+    </a>
+  </div>
+</section>
+
+<footer class="py-6 px-6 border-t" style="border-color:var(--b1)">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="text-sm" style="color:var(--t3)">← 전체 포트폴리오</a>
+    <span class="text-xs" style="color:var(--t3)">© 2024 LEE BOHEE</span>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}}),{threshold:.08});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

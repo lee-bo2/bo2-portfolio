@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBK i-ONE Bank — 이보희 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Pretendard','system-ui','sans-serif']}}}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;word-break:keep-all}
+    :root{--bg:#080808;--s1:#111;--s2:#1a1a1a;--b1:#222;--b2:#303030;--t1:#f0f0f0;--t2:#888;--t3:#444}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--t1);font-family:'Pretendard',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    .fade-up{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+    .fade-up.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}
+    hr.rule{border:none;border-top:1px solid var(--b1);margin:0}
+    .num{font-size:.72rem;font-weight:500;color:var(--t3);letter-spacing:.1em}
+    .tag{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .8rem;border-radius:999px;border:1px solid var(--b2);color:var(--t2);font-size:.75rem;font-weight:500}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.4rem;border:1px solid var(--b2);color:var(--t2);border-radius:.5rem;font-weight:600;font-size:.88rem;transition:border-color .2s,color .2s}
+    .btn-ghost:hover{border-color:var(--t2);color:var(--t1)}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+    body::after{content:'';position:fixed;inset:0;z-index:99;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");background-size:300px;opacity:.45}
+    .metric-card{padding:1.5rem;background:var(--s1);border:1px solid var(--b1);border-radius:.75rem}
+    .process-step{position:relative;padding-left:2rem}
+    .process-step::before{content:attr(data-n);position:absolute;left:0;top:0;font-size:.7rem;font-weight:700;color:var(--t3);letter-spacing:.05em}
+  </style>
+</head>
+<body>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b" style="border-color:var(--b1);background:rgba(8,8,8,.88);backdrop-filter:blur(16px)">
+  <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-2 text-sm" style="color:var(--t2)">
+      <iconify-icon icon="solar:arrow-left-linear" width="16"></iconify-icon>이보희<span style="color:var(--t3);">LEEBOHEE</span>
+    </a>
+    <div class="flex items-center gap-4" style="color:var(--t3);font-size:.8rem">
+      <span>04 / 05</span>
+      <a href="hana-bank.html" class="hover:text-white transition-colors">다음 프로젝트 →</a>
+    </div>
+  </div>
+</header>
+
+<section class="pt-32 pb-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="num">04</span>
+      <span class="tag">Fintech UX</span>
+      <span class="tag">Banking App</span>
+      <span class="tag">개인화</span>
+    </div>
+    <h1 class="text-[clamp(2rem,7vw,5rem)] font-bold tracking-tighter leading-none mb-6" style="color:var(--t1)">
+      IBK i-ONE Bank
+    </h1>
+    <p class="text-xl leading-relaxed max-w-[52ch] mb-10" style="color:var(--t2)">
+      복잡한 기업은행 앱을 직관적으로. FULL 뱅킹 서비스를 "나만의 은행" 개인화 콘셉트로 재구성하여
+      금융 초보자도 쉽게 쓸 수 있는 UX를 설계했습니다.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px" style="background:var(--b1)">
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">클라이언트</div><div class="text-sm font-semibold" style="color:var(--t1)">IBK기업은행</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">기간</div><div class="text-sm font-semibold" style="color:var(--t1)">2018–2019</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">역할</div><div class="text-sm font-semibold" style="color:var(--t1)">UI/UX Designer</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">소속</div><div class="text-sm font-semibold" style="color:var(--t1)">넷트루컨설팅</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 비포/애프터 뱅킹 화면 -->
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="rounded-2xl overflow-hidden" style="background:var(--s1);border:1px solid var(--b1)">
+      <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+        <defs><pattern id="bg-g4" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a1a1a" stroke-width=".6"/></pattern></defs>
+        <rect width="900" height="380" fill="url(#bg-g4)"/>
+
+        <!-- BEFORE 텍스트 -->
+        <text x="200" y="34" text-anchor="middle" fill="#333" font-size="11" font-family="Pretendard,sans-serif">Before — 복잡한 메뉴 구조</text>
+
+        <!-- BEFORE 폰 2개 -->
+        <!-- 폰 A -->
+        <rect x="50" y="45" width="130" height="270" rx="20" fill="#141414" stroke="#252525" stroke-width="1.5"/>
+        <rect x="56" y="55" width="118" height="254" rx="14" fill="#0f0f0f"/>
+        <rect x="96" y="57" width="28" height="5" rx="2.5" fill="#1e1e1e"/>
+        <rect x="56" y="68" width="118" height="18" fill="#111"/>
+        <rect x="63" y="73" width="20" height="5" rx="2" fill="#e4e4e7" opacity=".5"/>
+        <rect x="92" y="73" width="40" height="5" rx="2" fill="#2a2a2a"/>
+        <rect x="153" y="73" width="14" height="5" rx="2" fill="#252525"/>
+        <!-- 복잡한 메뉴 목록 (before) -->
+        <rect x="60" y="92" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="96" width="40" height="4" rx="2" fill="#333"/>
+        <rect x="140" y="95" width="24" height="6" rx="3" fill="#222"/>
+        <rect x="60" y="108" width="108" height="12" rx="3" fill="#141414"/>
+        <rect x="65" y="112" width="52" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="60" y="124" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="128" width="36" height="4" rx="2" fill="#333"/>
+        <rect x="60" y="140" width="108" height="12" rx="3" fill="#141414"/>
+        <rect x="65" y="144" width="48" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="60" y="156" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="160" width="44" height="4" rx="2" fill="#333"/>
+        <rect x="60" y="172" width="108" height="12" rx="3" fill="#141414"/>
+        <rect x="65" y="176" width="56" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="60" y="188" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="192" width="32" height="4" rx="2" fill="#333"/>
+        <rect x="60" y="204" width="108" height="12" rx="3" fill="#141414"/>
+        <rect x="65" y="208" width="48" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="60" y="220" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="224" width="40" height="4" rx="2" fill="#333"/>
+        <rect x="60" y="236" width="108" height="12" rx="3" fill="#141414"/>
+        <rect x="65" y="240" width="44" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="60" y="252" width="108" height="12" rx="3" fill="#1a1a1a"/>
+        <rect x="65" y="256" width="36" height="4" rx="2" fill="#333"/>
+        <!-- 탭바 -->
+        <rect x="56" y="291" width="118" height="18" fill="#111"/>
+        <rect x="60" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="89" y="294" width="26" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="118" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="100" y="304" width="20" height="2.5" rx="1.5" fill="#252525"/>
+
+        <!-- AFTER 화살표 -->
+        <text x="350" y="195" text-anchor="middle" fill="#333" font-size="22">→</text>
+
+        <!-- AFTER 텍스트 -->
+        <text x="650" y="34" text-anchor="middle" fill="#888" font-size="11" font-family="Pretendard,sans-serif">After — 나만의 은행, 직관적 UI</text>
+
+        <!-- AFTER 폰 3개 -->
+        <!-- 홈 -->
+        <rect x="460" y="45" width="130" height="270" rx="20" fill="#161616" stroke="#303030" stroke-width="1.5"/>
+        <rect x="466" y="55" width="118" height="254" rx="14" fill="#0f0f0f"/>
+        <rect x="506" y="57" width="28" height="5" rx="2.5" fill="#222"/>
+        <rect x="466" y="68" width="118" height="18" fill="#0a0a0a"/>
+        <rect x="472" y="73" width="14" height="5" rx="2" fill="#1e1e1e"/>
+        <rect x="494" y="73" width="32" height="5" rx="2" fill="#e4e4e7" opacity=".7"/>
+        <rect x="567" y="73" width="10" height="5" rx="2" fill="#1e1e1e"/>
+        <!-- 잔액 카드 -->
+        <rect x="470" y="90" width="110" height="52" rx="10" fill="#161616" stroke="#252525" stroke-width=".8"/>
+        <rect x="478" y="97" width="28" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="478" y="104" width="56" height="12" rx="3" fill="#e4e4e7"/>
+        <rect x="478" y="120" width="20" height="4" rx="2" fill="#333"/>
+        <rect x="548" y="119" width="26" height="10" rx="5" fill="#1e1e1e"/>
+        <!-- 빠른실행 4개 -->
+        <rect x="470" y="148" width="24" height="24" rx="7" fill="#1a1a1a"/>
+        <rect x="498" y="148" width="24" height="24" rx="7" fill="#1a1a1a"/>
+        <rect x="526" y="148" width="24" height="24" rx="7" fill="#1a1a1a"/>
+        <rect x="554" y="148" width="24" height="24" rx="7" fill="#1a1a1a"/>
+        <rect x="471" y="175" width="22" height="4" rx="2" fill="#252525"/>
+        <rect x="499" y="175" width="22" height="4" rx="2" fill="#252525"/>
+        <rect x="527" y="175" width="22" height="4" rx="2" fill="#252525"/>
+        <rect x="555" y="175" width="22" height="4" rx="2" fill="#252525"/>
+        <!-- 거래내역 -->
+        <rect x="470" y="186" width="60" height="5" rx="2" fill="#2a2a2a"/>
+        <rect x="550" y="185" width="28" height="7" rx="3.5" fill="#1e1e1e"/>
+        <line x1="470" y1="197" x2="580" y2="197" stroke="#1a1a1a" stroke-width=".6"/>
+        <rect x="470" y="202" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="204" width="36" height="4" rx="2" fill="#252525"/>
+        <rect x="486" y="211" width="24" height="3.5" rx="1.5" fill="#1e1e1e"/>
+        <rect x="556" y="204" width="24" height="4" rx="2" fill="#e4e4e7" opacity=".7"/>
+        <line x1="470" y1="218" x2="580" y2="218" stroke="#1a1a1a" stroke-width=".6"/>
+        <rect x="470" y="223" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="225" width="42" height="4" rx="2" fill="#252525"/>
+        <rect x="486" y="232" width="28" height="3.5" rx="1.5" fill="#1e1e1e"/>
+        <rect x="556" y="225" width="22" height="4" rx="2" fill="#333"/>
+        <line x1="470" y1="240" x2="580" y2="240" stroke="#1a1a1a" stroke-width=".6"/>
+        <rect x="470" y="245" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="247" width="30" height="4" rx="2" fill="#252525"/>
+        <rect x="486" y="254" width="20" height="3.5" rx="1.5" fill="#1e1e1e"/>
+        <rect x="556" y="247" width="24" height="4" rx="2" fill="#e4e4e7" opacity=".5"/>
+        <!-- 탭바 -->
+        <rect x="466" y="291" width="118" height="18" fill="#111"/>
+        <rect x="470" y="294" width="26" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="499" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="528" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="557" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="504" y="304" width="22" height="2.5" rx="1.5" fill="#252525"/>
+
+        <!-- 송금 화면 -->
+        <rect x="610" y="45" width="130" height="270" rx="20" fill="#161616" stroke="#303030" stroke-width="1.5"/>
+        <rect x="616" y="55" width="118" height="254" rx="14" fill="#0f0f0f"/>
+        <rect x="656" y="57" width="28" height="5" rx="2.5" fill="#222"/>
+        <rect x="616" y="68" width="118" height="18" fill="#0a0a0a"/>
+        <rect x="622" y="73" width="8" height="5" rx="2" fill="#1e1e1e"/>
+        <rect x="646" y="73" width="30" height="5" rx="2" fill="#e4e4e7" opacity=".7"/>
+        <!-- 송금 단계 표시 (스텝) -->
+        <circle cx="640" cy="96" r="8" fill="#e4e4e7" opacity=".9"/>
+        <text x="640" y="100" text-anchor="middle" fill="#0f0f0f" font-size="9" font-family="Pretendard,sans-serif">1</text>
+        <line x1="652" y1="96" x2="672" y2="96" stroke="#2a2a2a" stroke-width="1"/>
+        <circle cx="684" cy="96" r="8" fill="#1e1e1e"/>
+        <text x="684" y="100" text-anchor="middle" fill="#444" font-size="9" font-family="Pretendard,sans-serif">2</text>
+        <line x1="696" y1="96" x2="716" y2="96" stroke="#1a1a1a" stroke-width="1"/>
+        <circle cx="728" cy="96" r="8" fill="#1a1a1a"/>
+        <text x="728" y="100" text-anchor="middle" fill="#333" font-size="9" font-family="Pretendard,sans-serif">3</text>
+        <!-- 수신인 입력 -->
+        <rect x="620" y="112" width="108" height="14" rx="5" fill="none" stroke="#252525" stroke-width="1"/>
+        <rect x="627" y="117" width="50" height="4" rx="2" fill="#2a2a2a"/>
+        <!-- 최근 연락처 -->
+        <rect x="620" y="133" width="26" height="26" rx="13" fill="#1a1a1a"/>
+        <rect x="650" y="133" width="26" height="26" rx="13" fill="#1a1a1a"/>
+        <rect x="680" y="133" width="26" height="26" rx="13" fill="#1a1a1a"/>
+        <rect x="710" y="133" width="26" height="26" rx="13" fill="#1a1a1a"/>
+        <!-- 금액 입력 -->
+        <rect x="620" y="168" width="108" height="40" rx="8" fill="#141414" stroke="#252525" stroke-width=".8"/>
+        <rect x="628" y="176" width="26" height="5" rx="2" fill="#2a2a2a"/>
+        <rect x="628" y="186" width="60" height="12" rx="3" fill="#e4e4e7"/>
+        <!-- 숫자 패드 -->
+        <rect x="620" y="215" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <rect x="656" y="215" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <rect x="692" y="215" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <rect x="620" y="237" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <rect x="656" y="237" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <rect x="692" y="237" width="32" height="18" rx="5" fill="#1a1a1a"/>
+        <!-- CTA -->
+        <rect x="620" y="262" width="108" height="22" rx="11" fill="#e4e4e7"/>
+        <rect x="648" y="269" width="52" height="8" rx="4" fill="#0f0f0f"/>
+        <!-- 탭바 -->
+        <rect x="616" y="291" width="118" height="18" fill="#111"/>
+        <rect x="620" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="649" y="294" width="26" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="678" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="707" y="294" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="654" y="304" width="22" height="2.5" rx="1.5" fill="#252525"/>
+
+        <!-- 하단 레이블 -->
+        <text x="115" y="355" text-anchor="middle" fill="#333" font-size="11" font-family="Pretendard,sans-serif">기존 — 목록형 메뉴</text>
+        <text x="525" y="355" text-anchor="middle" fill="#555" font-size="11" font-family="Pretendard,sans-serif">홈 대시보드</text>
+        <text x="675" y="355" text-anchor="middle" fill="#555" font-size="11" font-family="Pretendard,sans-serif">3단계 송금 플로우</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Problem</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 문제였나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        IBK i-ONE뱅킹은 기업은행의 FULL 뱅킹 서비스를 제공하지만, 방대한 기능이 계층적으로 나열된
+        목록형 메뉴 구조가 사용자의 진입 장벽을 높이고 있었습니다.
+        특히 자영업자와 중소기업 사업자 등 금융 비전문가들이 자주 쓰는 기능을 찾는 데 어려움을 겪었습니다.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 1</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">복잡한 메뉴 구조</div>
+          <div class="text-sm" style="color:var(--t2)">수십 개 메뉴가 계층 없이 나열되어 원하는 기능 탐색 어려움</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 2</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">낮은 개인화 수준</div>
+          <div class="text-sm" style="color:var(--t2)">자주 쓰는 기능을 커스터마이즈할 수 없는 획일적 UI</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 3</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">긴 송금 플로우</div>
+          <div class="text-sm" style="color:var(--t2)">핵심 기능인 이체가 많은 단계를 요구해 이탈 유발</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Process</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">어떻게 풀었나</h2>
+    </div>
+    <div class="space-y-8 fade-up d1">
+
+      <div class="process-step" data-n="01">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">사용자 리서치 — 실제 사용 행태 파악</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          IBK 앱 이용자 인터뷰를 통해 자주 쓰는 기능 Top 5를 확인했습니다. 이체, 잔액 조회,
+          공과금 납부, 대출 이자 확인, 환전이 80% 이상의 사용 비중을 차지한다는 것을 파악하고
+          이 기능들을 우선 진입점으로 배치하는 설계 방향을 수립했습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="02">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">IA 재설계 — 기능 중심에서 목적 중심으로</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          메뉴 구조를 "기능명" 나열에서 사용자의 "목적" 기반으로 재편했습니다.
+          "보내기", "받기", "모으기", "빌리기"처럼 직관적인 언어로 카테고리를 재정의하고,
+          세부 메뉴를 그 안에 귀속시켰습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="03">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">"나만의 은행" 홈 설계</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          대시보드형 홈 화면을 설계했습니다. 잔액 카드를 중앙에 배치하고, 사용자가 직접
+          퀵메뉴 4개를 설정할 수 있는 개인화 영역을 제공했습니다. 최근 거래 내역은
+          홈에서 바로 확인할 수 있도록 스크롤 없이 접근 가능하게 했습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="04">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">송금 플로우 3단계로 압축</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          기존 다단계 이체 플로우를 수신인 선택 → 금액 입력 → 확인의 3단계로 압축했습니다.
+          최근 연락처를 첫 단계에 노출하고, 자주 쓰는 계좌를 즐겨찾기로 관리할 수 있게 했습니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Outcome</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 달라졌나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        직관적 UI와 개인화 홈 화면으로 사용자가 원하는 기능에 더 빠르게 도달할 수 있게 됐습니다.
+        특히 이체 플로우 단축은 핵심 서비스의 완료율 향상에 직접 기여했습니다.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">3단계</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">송금 플로우</div>
+          <div class="text-xs" style="color:var(--t2)">수신인 → 금액 → 확인으로 압축</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">4개</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">개인화 퀵메뉴</div>
+          <div class="text-xs" style="color:var(--t2)">사용자가 직접 설정하는 홈 단축키</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">목적 기반</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">IA 재편</div>
+          <div class="text-xs" style="color:var(--t2)">기능명 나열에서 사용자 언어로</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div>
+      <div class="text-xs mb-2" style="color:var(--t3)">다음 프로젝트</div>
+      <div class="text-xl font-bold" style="color:var(--t1)">KEB하나은행 — 모바일 뱅킹 리뉴얼</div>
+    </div>
+    <a href="hana-bank.html" class="btn-ghost whitespace-nowrap">
+      자세히 보기
+      <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+    </a>
+  </div>
+</section>
+
+<footer class="py-6 px-6 border-t" style="border-color:var(--b1)">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="text-sm" style="color:var(--t3)">← 전체 포트폴리오</a>
+    <span class="text-xs" style="color:var(--t3)">© 2024 LEE BOHEE</span>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}}),{threshold:.08});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

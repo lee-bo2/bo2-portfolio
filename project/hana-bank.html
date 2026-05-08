@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEB하나은행 — 이보희 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Pretendard','system-ui','sans-serif']}}}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;word-break:keep-all}
+    :root{--bg:#080808;--s1:#111;--s2:#1a1a1a;--b1:#222;--b2:#303030;--t1:#f0f0f0;--t2:#888;--t3:#444}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--t1);font-family:'Pretendard',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    .fade-up{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+    .fade-up.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}
+    hr.rule{border:none;border-top:1px solid var(--b1);margin:0}
+    .num{font-size:.72rem;font-weight:500;color:var(--t3);letter-spacing:.1em}
+    .tag{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .8rem;border-radius:999px;border:1px solid var(--b2);color:var(--t2);font-size:.75rem;font-weight:500}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.4rem;border:1px solid var(--b2);color:var(--t2);border-radius:.5rem;font-weight:600;font-size:.88rem;transition:border-color .2s,color .2s}
+    .btn-ghost:hover{border-color:var(--t2);color:var(--t1)}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+    body::after{content:'';position:fixed;inset:0;z-index:99;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");background-size:300px;opacity:.45}
+    .metric-card{padding:1.5rem;background:var(--s1);border:1px solid var(--b1);border-radius:.75rem}
+    .process-step{position:relative;padding-left:2rem}
+    .process-step::before{content:attr(data-n);position:absolute;left:0;top:0;font-size:.7rem;font-weight:700;color:var(--t3);letter-spacing:.05em}
+  </style>
+</head>
+<body>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b" style="border-color:var(--b1);background:rgba(8,8,8,.88);backdrop-filter:blur(16px)">
+  <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-2 text-sm" style="color:var(--t2)">
+      <iconify-icon icon="solar:arrow-left-linear" width="16"></iconify-icon>이보희<span style="color:var(--t3);">LEEBOHEE</span>
+    </a>
+    <div class="flex items-center gap-4" style="color:var(--t3);font-size:.8rem">
+      <span>05 / 05</span>
+      <a href="../index.html#work" class="hover:text-white transition-colors">← 전체 Work</a>
+    </div>
+  </div>
+</header>
+
+<section class="pt-32 pb-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="num">05</span>
+      <span class="tag">Fintech UX</span>
+      <span class="tag">리뉴얼</span>
+      <span class="tag">가독성</span>
+    </div>
+    <h1 class="text-[clamp(2rem,7vw,5rem)] font-bold tracking-tighter leading-none mb-6" style="color:var(--t1)">
+      KEB하나은행
+    </h1>
+    <p class="text-xl leading-relaxed max-w-[52ch] mb-10" style="color:var(--t2)">
+      구 KEB하나은행 모바일 앱의 전면 리뉴얼. 금융 프로세스 단순화, 가독성 강화,
+      그리고 통합 브랜드 이미지 전달이라는 세 가지 축으로 UX를 재설계했습니다.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px" style="background:var(--b1)">
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">클라이언트</div><div class="text-sm font-semibold" style="color:var(--t1)">KEB하나은행</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">기간</div><div class="text-sm font-semibold" style="color:var(--t1)">2017–2018</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">역할</div><div class="text-sm font-semibold" style="color:var(--t1)">UI/UX Designer</div></div>
+      <div class="py-5 px-5" style="background:var(--bg)"><div class="text-xs mb-1" style="color:var(--t3)">소속</div><div class="text-sm font-semibold" style="color:var(--t1)">넷트루컨설팅</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 리뉴얼 전후 비교 비주얼 -->
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="rounded-2xl overflow-hidden" style="background:var(--s1);border:1px solid var(--b1)">
+      <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+        <defs><pattern id="bg-g5" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a1a1a" stroke-width=".6"/></pattern></defs>
+        <rect width="900" height="380" fill="url(#bg-g5)"/>
+
+        <!-- BEFORE 레이블 -->
+        <text x="185" y="34" text-anchor="middle" fill="#333" font-size="11" font-family="Pretendard,sans-serif">Before — 노후화된 UI</text>
+
+        <!-- BEFORE 폰 2개 -->
+        <rect x="30" y="45" width="130" height="275" rx="20" fill="#1a1a1a" stroke="#252525" stroke-width="1.5"/>
+        <rect x="36" y="55" width="118" height="259" rx="14" fill="#141414"/>
+        <rect x="76" y="57" width="28" height="5" rx="2.5" fill="#252525"/>
+        <!-- 구형 앱바 (진한 색) -->
+        <rect x="36" y="68" width="118" height="24" fill="#1e1e1e"/>
+        <rect x="44" y="75" width="16" height="5" rx="2" fill="#333"/>
+        <rect x="68" y="76" width="40" height="4" rx="2" fill="#2a2a2a"/>
+        <rect x="140" y="75" width="8" height="6" rx="2" fill="#2a2a2a"/>
+        <!-- 구형 배너 (낮은 대비) -->
+        <rect x="36" y="92" width="118" height="36" fill="#1a1a1a"/>
+        <rect x="44" y="100" width="50" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="44" y="112" width="34" height="5" rx="2" fill="#222"/>
+        <rect x="116" y="96" width="30" height="28" rx="3" fill="#222"/>
+        <!-- 구형 메뉴 (낮은 가독성) -->
+        <rect x="36" y="134" width="56" height="50" rx="5" fill="#1a1a1a"/>
+        <rect x="44" y="146" width="20" height="14" rx="3" fill="#222"/>
+        <rect x="44" y="163" width="30" height="4" rx="2" fill="#252525"/>
+        <rect x="36" y="134" width="1" height="50" fill="#252525"/>
+        <rect x="98" y="134" width="56" height="50" rx="5" fill="#1a1a1a"/>
+        <rect x="106" y="146" width="20" height="14" rx="3" fill="#222"/>
+        <rect x="106" y="163" width="28" height="4" rx="2" fill="#252525"/>
+        <!-- 구형 거래내역 (밀집) -->
+        <rect x="36" y="192" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="195" width="40" height="4" rx="2" fill="#252525"/>
+        <rect x="36" y="206" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="209" width="50" height="4" rx="2" fill="#222"/>
+        <rect x="118" y="209" width="28" height="4" rx="2" fill="#222"/>
+        <rect x="36" y="220" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="223" width="44" height="4" rx="2" fill="#252525"/>
+        <rect x="118" y="223" width="22" height="4" rx="2" fill="#222"/>
+        <rect x="36" y="234" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="237" width="38" height="4" rx="2" fill="#252525"/>
+        <rect x="36" y="248" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="251" width="52" height="4" rx="2" fill="#222"/>
+        <rect x="118" y="251" width="26" height="4" rx="2" fill="#222"/>
+        <rect x="36" y="262" width="118" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="44" y="265" width="44" height="4" rx="2" fill="#252525"/>
+        <!-- 탭바 -->
+        <rect x="36" y="296" width="118" height="18" fill="#1e1e1e"/>
+        <rect x="40" y="299" width="26" height="8" rx="2" fill="#252525"/>
+        <rect x="69" y="299" width="26" height="8" rx="2" fill="#222"/>
+        <rect x="98" y="299" width="26" height="8" rx="2" fill="#222"/>
+        <rect x="79" y="309" width="18" height="2" rx="1" fill="#2a2a2a"/>
+
+        <!-- 화살표 -->
+        <text x="350" y="200" text-anchor="middle" fill="#333" font-size="22">→</text>
+
+        <!-- AFTER 레이블 -->
+        <text x="660" y="34" text-anchor="middle" fill="#888" font-size="11" font-family="Pretendard,sans-serif">After — 명료한 가독성 · 브랜드 통합</text>
+
+        <!-- AFTER 폰 3개 -->
+        <!-- 홈 화면 -->
+        <rect x="460" y="45" width="130" height="275" rx="20" fill="#161616" stroke="#303030" stroke-width="1.5"/>
+        <rect x="466" y="55" width="118" height="259" rx="14" fill="#0f0f0f"/>
+        <rect x="506" y="57" width="28" height="5" rx="2.5" fill="#222"/>
+        <!-- 깔끔한 앱바 -->
+        <rect x="466" y="68" width="118" height="20" fill="#0a0a0a"/>
+        <rect x="473" y="73" width="22" height="6" rx="3" fill="#e4e4e7" opacity=".9"/>
+        <rect x="562" y="73" width="14" height="6" rx="3" fill="#1e1e1e"/>
+        <!-- 잔액 카드 (높은 대비) -->
+        <rect x="470" y="92" width="110" height="56" rx="10" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+        <rect x="478" y="100" width="26" height="5" rx="2.5" fill="#333"/>
+        <rect x="478" y="109" width="62" height="14" rx="3" fill="#e4e4e7"/>
+        <rect x="478" y="127" width="18" height="4" rx="2" fill="#333"/>
+        <rect x="548" y="127" width="26" height="12" rx="6" fill="#1e1e1e"/>
+        <!-- 메뉴 그리드 (여백 충분) -->
+        <rect x="470" y="154" width="26" height="26" rx="7" fill="#1a1a1a"/>
+        <rect x="500" y="154" width="26" height="26" rx="7" fill="#1a1a1a"/>
+        <rect x="530" y="154" width="26" height="26" rx="7" fill="#1a1a1a"/>
+        <rect x="560" y="154" width="26" height="26" rx="7" fill="#1a1a1a"/>
+        <rect x="471" y="183" width="24" height="4" rx="2" fill="#252525"/>
+        <rect x="501" y="183" width="24" height="4" rx="2" fill="#252525"/>
+        <rect x="531" y="183" width="24" height="4" rx="2" fill="#252525"/>
+        <rect x="561" y="183" width="24" height="4" rx="2" fill="#252525"/>
+        <!-- 거래 내역 (여백·구분선 명확) -->
+        <rect x="470" y="196" width="60" height="6" rx="3" fill="#2a2a2a"/>
+        <line x1="470" y1="208" x2="580" y2="208" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="470" y="214" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="216" width="44" height="5" rx="2.5" fill="#252525"/>
+        <rect x="486" y="224" width="28" height="4" rx="2" fill="#1e1e1e"/>
+        <rect x="555" y="216" width="26" height="5" rx="2.5" fill="#e4e4e7" opacity=".7"/>
+        <line x1="470" y1="232" x2="580" y2="232" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="470" y="238" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="240" width="36" height="5" rx="2.5" fill="#252525"/>
+        <rect x="486" y="248" width="22" height="4" rx="2" fill="#1e1e1e"/>
+        <rect x="555" y="240" width="22" height="5" rx="2.5" fill="#333"/>
+        <line x1="470" y1="256" x2="580" y2="256" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="470" y="262" width="12" height="12" rx="3" fill="#1e1e1e"/>
+        <rect x="486" y="264" width="48" height="5" rx="2.5" fill="#252525"/>
+        <rect x="486" y="272" width="30" height="4" rx="2" fill="#1e1e1e"/>
+        <rect x="555" y="264" width="24" height="5" rx="2.5" fill="#e4e4e7" opacity=".5"/>
+        <!-- 탭바 -->
+        <rect x="466" y="296" width="118" height="18" fill="#111"/>
+        <rect x="470" y="299" width="26" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="499" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="528" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="557" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="504" y="309" width="22" height="2.5" rx="1.5" fill="#252525"/>
+
+        <!-- 금리/환율 화면 -->
+        <rect x="610" y="45" width="130" height="275" rx="20" fill="#161616" stroke="#303030" stroke-width="1.5"/>
+        <rect x="616" y="55" width="118" height="259" rx="14" fill="#0f0f0f"/>
+        <rect x="656" y="57" width="28" height="5" rx="2.5" fill="#222"/>
+        <rect x="616" y="68" width="118" height="20" fill="#0a0a0a"/>
+        <rect x="621" y="73" width="8" height="6" rx="2" fill="#1e1e1e"/>
+        <rect x="646" y="73" width="32" height="6" rx="3" fill="#e4e4e7" opacity=".7"/>
+        <!-- 탭 (금리/환율/공지) -->
+        <rect x="616" y="90" width="118" height="16" fill="#0a0a0a"/>
+        <rect x="620" y="93" width="30" height="10" rx="5" fill="#e4e4e7" opacity=".15" stroke="#e4e4e7" stroke-width=".8"/>
+        <rect x="654" y="94" width="24" height="8" rx="4" fill="none"/>
+        <rect x="682" y="94" width="24" height="8" rx="4" fill="none"/>
+        <rect x="622" y="96" width="26" height="5" rx="2.5" fill="#e4e4e7" opacity=".6"/>
+        <rect x="655" y="96" width="22" height="4" rx="2" fill="#333"/>
+        <rect x="683" y="96" width="22" height="4" rx="2" fill="#333"/>
+        <!-- 금리 리스트 (가독성 중심) -->
+        <rect x="620" y="114" width="108" height="24" rx="6" fill="#161616" stroke="#222" stroke-width=".8"/>
+        <rect x="628" y="120" width="34" height="6" rx="3" fill="#e4e4e7" opacity=".8"/>
+        <rect x="700" y="120" width="20" height="6" rx="3" fill="#e4e4e7" opacity=".6"/>
+        <rect x="620" y="142" width="108" height="24" rx="6" fill="#141414" stroke="#1e1e1e" stroke-width=".6"/>
+        <rect x="628" y="148" width="40" height="6" rx="3" fill="#252525"/>
+        <rect x="700" y="148" width="20" height="6" rx="3" fill="#333"/>
+        <rect x="620" y="170" width="108" height="24" rx="6" fill="#141414" stroke="#1e1e1e" stroke-width=".6"/>
+        <rect x="628" y="176" width="28" height="6" rx="3" fill="#252525"/>
+        <rect x="700" y="176" width="20" height="6" rx="3" fill="#333"/>
+        <rect x="620" y="198" width="108" height="24" rx="6" fill="#141414" stroke="#1e1e1e" stroke-width=".6"/>
+        <rect x="628" y="204" width="44" height="6" rx="3" fill="#252525"/>
+        <rect x="700" y="204" width="20" height="6" rx="3" fill="#333"/>
+        <!-- 브랜드 배너 -->
+        <rect x="620" y="230" width="108" height="40" rx="8" fill="#141414" stroke="#1e1e1e" stroke-width=".8"/>
+        <rect x="628" y="240" width="48" height="8" rx="3" fill="#e4e4e7" opacity=".7"/>
+        <rect x="628" y="252" width="32" height="5" rx="2.5" fill="#333"/>
+        <rect x="686" y="234" width="34" height="32" rx="5" fill="#1a1a1a"/>
+        <!-- 탭바 -->
+        <rect x="616" y="296" width="118" height="18" fill="#111"/>
+        <rect x="620" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="649" y="299" width="26" height="8" rx="2" fill="#2a2a2a"/>
+        <rect x="678" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="707" y="299" width="26" height="8" rx="2" fill="#1e1e1e"/>
+        <rect x="654" y="309" width="22" height="2.5" rx="1.5" fill="#252525"/>
+
+        <!-- 하단 레이블 -->
+        <text x="100" y="355" text-anchor="middle" fill="#333" font-size="11" font-family="Pretendard,sans-serif">기존 — 저대비 / 밀집 레이아웃</text>
+        <text x="525" y="355" text-anchor="middle" fill="#555" font-size="11" font-family="Pretendard,sans-serif">홈 — 카드 · 여백 · 명확한 계층</text>
+        <text x="675" y="355" text-anchor="middle" fill="#555" font-size="11" font-family="Pretendard,sans-serif">금리 정보 — 탭 구조</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Problem</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 문제였나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        KEB하나은행의 모바일 앱은 구 외환은행과 하나은행의 통합 이후 두 은행의 UI가 혼재된 상태였습니다.
+        통일되지 않은 시각 언어, 낮은 대비의 금융 정보, 여백 없이 밀집된 레이아웃이
+        사용자 신뢰도와 가독성 모두를 저하시키고 있었습니다.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 1</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">낮은 가독성</div>
+          <div class="text-sm" style="color:var(--t2)">금융 수치(잔액·금리)가 작고 대비가 낮아 읽기 어려움</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 2</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">브랜드 분열</div>
+          <div class="text-sm" style="color:var(--t2)">통합 후에도 두 은행의 UI 스타일이 혼재</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-xs mb-2" style="color:var(--t3)">핵심 과제 3</div>
+          <div class="text-base font-semibold mb-1" style="color:var(--t1)">복잡한 금융 프로세스</div>
+          <div class="text-sm" style="color:var(--t2)">금리 조회, 대출 신청 등 주요 플로우가 비효율적으로 구성</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Process</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">어떻게 풀었나</h2>
+    </div>
+    <div class="space-y-8 fade-up d1">
+
+      <div class="process-step" data-n="01">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">가독성 우선 타이포그래피 체계 수립</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          금융 앱에서 가장 중요한 정보인 잔액, 이체 금액, 금리를 최우선 계층으로 설정했습니다.
+          숫자 가독성을 위해 tabular-nums 속성을 적용하고, 금액 단위(원)와 소수점 크기를 구분해
+          사용자가 금액을 한눈에 파악할 수 있도록 했습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="02">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">여백과 카드 레이아웃으로 밀집 해소</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          목록형 UI에서 카드 기반 UI로 전환하여 각 정보 블록 사이에 충분한 여백을 부여했습니다.
+          구분선과 색상 대신 여백과 카드 배경으로 구역을 나누어 더 깔끔하고 현대적인 인상을 만들었습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="03">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">통합 브랜드 시각 언어 정의</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          KEB하나은행의 단일 브랜드 정체성을 앱 전반에 일관되게 적용했습니다.
+          색상 시스템을 정리하고 Primary 컬러, 상태 컬러(성공/경고/오류), 텍스트 계층을
+          디자인 토큰으로 정의하여 모든 화면이 하나의 브랜드처럼 느껴지도록 했습니다.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="04">
+        <h3 class="text-base font-semibold mb-2" style="color:var(--t1)">금융 프로세스 단순화</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--t2)">
+          금리 조회, 대출 이자 계산, 환율 변환 등 자주 쓰이는 금융 계산 기능을
+          탭 구조로 묶어 접근성을 높였습니다. 복잡한 조건 입력 화면도
+          단계별 프로세스로 재편하여 사용자의 인지 부담을 줄였습니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12">
+    <div class="fade-up">
+      <span class="num block mb-3">Outcome</span>
+      <h2 class="text-2xl font-bold tracking-tight" style="color:var(--t1)">무엇이 달라졌나</h2>
+    </div>
+    <div class="space-y-6 fade-up d1">
+      <p class="text-lg leading-relaxed" style="color:var(--t2)">
+        가독성과 여백 중심의 리뉴얼로 금융 정보를 명확하게 전달하면서도
+        KEB하나은행의 통합 브랜드 이미지를 일관되게 구현했습니다.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">카드 UI</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">레이아웃 전환</div>
+          <div class="text-xs" style="color:var(--t2)">밀집 목록형에서 여백 중심 카드형으로</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">단일</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">통합 브랜드</div>
+          <div class="text-xs" style="color:var(--t2)">두 은행 혼재 UI를 하나의 브랜드로</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-bold tracking-tighter mb-1" style="color:var(--t1)">탭 구조</div>
+          <div class="text-sm font-semibold mb-1" style="color:var(--t1)">금융 정보 접근성</div>
+          <div class="text-xs" style="color:var(--t2)">금리·환율·공지 원터치 전환</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 전체 포트폴리오로 돌아가기 -->
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div>
+      <div class="text-xs mb-2" style="color:var(--t3)">마지막 프로젝트입니다</div>
+      <div class="text-xl font-bold" style="color:var(--t1)">전체 포트폴리오로 돌아가기</div>
+    </div>
+    <a href="../index.html" class="btn-ghost whitespace-nowrap">
+      <iconify-icon icon="solar:arrow-left-linear" width="16"></iconify-icon>
+      LEE BOHEE 포트폴리오
+    </a>
+  </div>
+</section>
+
+<footer class="py-6 px-6 border-t" style="border-color:var(--b1)">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="text-sm" style="color:var(--t3)">← 전체 포트폴리오</a>
+    <span class="text-xs" style="color:var(--t3)">© 2024 LEE BOHEE</span>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}}),{threshold:.08});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

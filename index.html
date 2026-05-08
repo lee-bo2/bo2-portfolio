@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이보희 — Product Designer</title>
+  <meta name="description" content="10년 경력 프로덕트 디자이너 이보희 포트폴리오 — 금융·리테일·이커머스 UX/BX">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; word-break: keep-all; }
+
+    :root {
+      --bg:  #080808;
+      --s1:  #111111;
+      --s2:  #1a1a1a;
+      --b1:  #222222;
+      --b2:  #303030;
+      --t1:  #f0f0f0;
+      --t2:  #888888;
+      --t3:  #444444;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--t1); font-family: 'Pretendard', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    @keyframes fadeUp  { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    .fade-up { opacity:0; transform:translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .fade-up.on { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay:.07s; }
+    .d2 { transition-delay:.14s; }
+    .d3 { transition-delay:.22s; }
+    .d4 { transition-delay:.32s; }
+
+    .h-anim { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) both; }
+    .ha1 { animation-delay:.1s; }
+    .ha2 { animation-delay:.22s; }
+    .ha3 { animation-delay:.36s; }
+    .ha4 { animation-delay:.52s; }
+
+    hr.rule { border:none; border-top:1px solid var(--b1); margin:0; }
+
+    .num { font-size:.72rem; font-weight:500; color:var(--t3); letter-spacing:.1em; font-variant-numeric:tabular-nums; }
+
+    .tag {
+      display:inline-flex; align-items:center; gap:.35rem;
+      padding:.28rem .8rem; border-radius:999px;
+      border:1px solid var(--b2); color:var(--t2);
+      font-size:.75rem; font-weight:500;
+      transition: border-color .25s, color .25s;
+    }
+    .tag:hover { border-color:var(--t2); color:var(--t1); }
+
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:.6rem;
+      padding:.9rem 1.8rem; background:var(--t1); color:var(--bg);
+      border-radius:.5rem; font-weight:700; font-size:.95rem;
+      transition: transform .35s cubic-bezier(.16,1,.3,1), background .2s;
+    }
+    .btn-primary:hover { transform:scale(1.03); background:#ffffff; }
+    .btn-primary:active { transform:scale(.97); }
+
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:.6rem;
+      padding:.9rem 1.8rem; border:1px solid var(--b2); color:var(--t2);
+      border-radius:.5rem; font-weight:600; font-size:.95rem;
+      transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .2s, color .2s;
+    }
+    .btn-ghost:hover { transform:scale(1.03); border-color:var(--t2); color:var(--t1); }
+    .btn-ghost:active { transform:scale(.97); }
+
+    .marquee-track { animation: marquee 32s linear infinite; }
+    .marquee-track:hover { animation-play-state:paused; }
+
+    .proj-img { transition: transform .8s cubic-bezier(.16,1,.3,1); }
+    .proj-card:hover .proj-img { transform:scale(1.03); }
+
+    .proj-link {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.8rem; font-weight:600; color:var(--t3);
+      transition: color .2s, gap .2s;
+    }
+    .proj-link:hover { color:var(--t1); gap:.6rem; }
+
+    ::-webkit-scrollbar { width:3px; }
+    ::-webkit-scrollbar-thumb { background:var(--b2); border-radius:2px; }
+
+    body::after {
+      content:''; position:fixed; inset:0; z-index:99; pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");
+      background-size:300px 300px; opacity:.45;
+    }
+
+    #sbar { transform:translateY(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); }
+    #sbar.show { transform:translateY(0); }
+
+    /* 경력 타임라인 */
+    .exp-line { position:relative; padding-left:1.5rem; }
+    .exp-line::before {
+      content:''; position:absolute; left:0; top:.6rem; bottom:0;
+      width:1px; background:var(--b2);
+    }
+    .exp-dot {
+      position:absolute; left:-.3rem; top:.55rem;
+      width:.6rem; height:.6rem; border-radius:50%;
+      background:var(--b2); border:1px solid var(--b1);
+    }
+    .exp-dot.active { background:var(--t1); }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────── -->
+<header class="fixed top-0 inset-x-0 z-50 border-b" style="border-color:var(--b1); background:rgba(8,8,8,.88); backdrop-filter:blur(16px);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between">
+    <a href="/" class="font-bold text-sm tracking-wider" style="color:var(--t1);">LEEBOHEE</a>
+    <nav class="hidden md:flex items-center gap-8" style="color:var(--t2); font-size:.85rem;">
+      <a href="#work"    class="hover:text-white transition-colors">Work</a>
+      <a href="#about"   class="hover:text-white transition-colors">About</a>
+      <a href="#contact"    class="hover:text-white transition-colors">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ─── HERO ─────────────────────────────────── -->
+<section class="min-h-[100dvh] flex flex-col justify-end pb-16 pt-28 px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <div class="h-anim ha1 flex items-center gap-4 mb-8">
+      <span class="num">001</span>
+      <span class="tag">
+        <iconify-icon icon="solar:map-point-linear" width="12"></iconify-icon>
+        서울 · 원격 가능
+      </span>
+      <span class="tag" style="color:#facc15; border-color:rgba(250,204,21,.25);">
+        <span class="inline-block w-1.5 h-1.5 rounded-full animate-pulse" style="background:#facc15;"></span>
+        제안 수락 가능
+      </span>
+    </div>
+
+    <div class="h-anim ha2 overflow-hidden mb-2">
+      <h1 class="text-[clamp(3.5rem,12vw,9rem)] font-bold tracking-tighter leading-none" style="color:var(--t1);">
+        LEE
+      </h1>
+    </div>
+    <div class="h-anim ha2 overflow-hidden mb-10">
+      <h1 class="text-[clamp(3.5rem,12vw,9rem)] font-bold tracking-tighter leading-none" style="color:var(--t1);">
+        BOHEE
+      </h1>
+    </div>
+
+    <div class="h-anim ha3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-end">
+      <div class="lg:col-span-2">
+        <p class="text-lg leading-relaxed max-w-[52ch]" style="color:var(--t2);">
+          금융·리테일·이커머스 10년. 사용자의 언어로 문제를 정의하고, 비즈니스의 언어로 풀어왔습니다.
+          현재 월급쟁이부자들에서 Senior Product Designer로 월부닷컴 UX를 담당하고 있습니다.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 md:items-end">
+        <div class="h-anim ha4 flex flex-wrap gap-3">
+          <a href="tel:01057575280" class="btn-primary">
+            <iconify-icon icon="solar:phone-bold" width="18"></iconify-icon>
+            010-5757-5280
+          </a>
+          <a href="mailto:qhgml27@gmail.com" class="btn-ghost">
+            <iconify-icon icon="solar:letter-linear" width="18"></iconify-icon>
+            이메일
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ─── STATS 바 ─────────────────────────────── -->
+<section class="py-10 px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px" style="background:var(--b1);">
+    <div class="py-8 px-6 flex flex-col gap-1" style="background:var(--bg);">
+      <span class="text-4xl font-bold tracking-tighter" style="color:var(--t1);">10<span style="color:var(--t3);">+</span></span>
+      <span class="text-sm" style="color:var(--t2);">년 경력</span>
+    </div>
+    <div class="py-8 px-6 flex flex-col gap-1" style="background:var(--bg);">
+      <span class="text-4xl font-bold tracking-tighter" style="color:var(--t1);">5</span>
+      <span class="text-sm" style="color:var(--t2);">대 클라이언트</span>
+      <span class="text-xs mt-1" style="color:var(--t3);">BGF · 신세계 · 롯데 · IBK · 하나</span>
+    </div>
+    <div class="py-8 px-6 flex flex-col gap-1" style="background:var(--bg);">
+      <span class="text-4xl font-bold tracking-tighter" style="color:var(--t1);">50<span style="color:var(--t3);">+</span></span>
+      <span class="text-sm" style="color:var(--t2);">완료 프로젝트</span>
+    </div>
+    <div class="py-8 px-6 flex flex-col gap-1" style="background:var(--bg);">
+      <span class="text-4xl font-bold tracking-tighter" style="color:var(--t1);">3</span>
+      <span class="text-sm" style="color:var(--t2);">전문 도메인</span>
+      <span class="text-xs mt-1" style="color:var(--t3);">금융 · 리테일 · 이커머스</span>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ─── WORK (merged) ────────────────────────── -->
+<section id="work" class="py-24 px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="fade-up flex items-baseline justify-between mb-16 gap-4">
+      <div class="flex items-baseline gap-6">
+        <span class="num">002</span>
+        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--t1);">Work</h2>
+      </div>
+      <span class="text-sm hidden sm:block" style="color:var(--t3);">2013 — 현재</span>
+    </div>
+
+    <div class="flex flex-col divide-y" style="border-color:var(--b1);">
+
+      <!-- 월급쟁이부자들 -->
+      <div class="fade-up py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2022.11 — 현재</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">월급쟁이부자들</div>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-lg font-bold" style="color:var(--t1);">Senior Product Designer</span>
+            <span class="tag text-xs" style="color:#facc15; border-color:rgba(250,204,21,.25);">
+              <span class="inline-block w-1.5 h-1.5 rounded-full animate-pulse" style="background:#facc15;"></span>
+              재직 중
+            </span>
+          </div>
+          <div class="space-y-2">
+            <div class="py-3 px-4 rounded-lg" style="background:var(--s1); border:1px solid var(--b1);">
+              <div class="text-sm font-semibold mb-0.5" style="color:var(--t1);">월부닷컴 MAU 100만 달성</div>
+              <div class="text-xs" style="color:var(--t3);">2023.11 — 현재 · 커뮤니티 유입·참여·재방문 퍼널 UX 설계</div>
+            </div>
+            <div class="py-3 px-4 rounded-lg" style="background:var(--s1); border:1px solid var(--b1);">
+              <div class="text-sm font-semibold mb-0.5" style="color:var(--t1);">자사 플랫폼 UX/UI 개선</div>
+              <div class="text-xs" style="color:var(--t3);">2023.01 — 2023.05 · 로그인 · GNB · 회원가입 플로우 리디자인</div>
+            </div>
+            <div class="py-3 px-4 rounded-lg" style="background:var(--s1); border:1px solid var(--b1);">
+              <div class="text-sm font-semibold mb-0.5" style="color:var(--t1);">자사 플랫폼 운영</div>
+              <div class="text-xs" style="color:var(--t3);">2022.11 — 2023.05 · 상세페이지 · 배너 · 프로모션 · 디자인 가이드</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BGF리테일 -->
+      <div class="fade-up d1 py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2022.01 — 2022.11</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">BGF리테일</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold mb-4" style="color:var(--t1);">UI/UX Lead Designer</div>
+          <a href="project/pocket-cu.html" class="proj-card group flex justify-between items-center gap-4 py-4 px-5 rounded-xl" style="background:var(--s1); border:1px solid var(--b1);">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="num">01</span>
+                <span class="tag text-xs">Mobile UX</span>
+                <span class="tag text-xs">Design System</span>
+              </div>
+              <div class="text-base font-bold mb-1" style="color:var(--t1);">포켓CU — 디자인 시스템 & 컴포넌트 고도화</div>
+              <div class="text-sm" style="color:var(--t2);">디자인 라이브러리 구축 · UI 공통화 · 개발협업 효율 개선</div>
+            </div>
+            <span class="proj-link shrink-0">자세히 보기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Regular Bold -->
+      <div class="fade-up d2 py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2019 — 2021</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">Regular Bold</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold mb-4" style="color:var(--t1);">UI/UX·BX Designer</div>
+          <div class="space-y-3">
+            <a href="project/si-village.html" class="proj-card group flex justify-between items-center gap-4 py-4 px-5 rounded-xl" style="background:var(--s1); border:1px solid var(--b1);">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="num">02</span>
+                  <span class="tag text-xs">BX Strategy</span>
+                  <span class="tag text-xs">Brand Identity</span>
+                </div>
+                <div class="text-base font-bold mb-1" style="color:var(--t1);">S.I.VILLAGE — 리브랜딩 & 디자인 시스템</div>
+                <div class="text-sm" style="color:var(--t2);">"Gate of Light" 콘셉트 · Core Value · 신세계 럭셔리 BX</div>
+              </div>
+              <span class="proj-link shrink-0">자세히 보기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon></span>
+            </a>
+            <a href="project/lotte-on.html" class="proj-card group flex justify-between items-center gap-4 py-4 px-5 rounded-xl" style="background:var(--s1); border:1px solid var(--b1);">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="num">03</span>
+                  <span class="tag text-xs">E-Commerce UX</span>
+                  <span class="tag text-xs">통합 전략</span>
+                </div>
+                <div class="text-base font-bold mb-1" style="color:var(--t1);">롯데ON — 7개 채널 통합 UX</div>
+                <div class="text-sm" style="color:var(--t2);">AS-IS/TO-BE 분석 · O2O · 개인화 · 비디오커머스 설계</div>
+              </div>
+              <span class="proj-link shrink-0">자세히 보기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 넷트루컨설팅그룹 -->
+      <div class="fade-up d3 py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2017 — 2019</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">넷트루컨설팅그룹</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold mb-4" style="color:var(--t1);">UI/UX Designer</div>
+          <div class="space-y-3">
+            <a href="project/ibk-bank.html" class="proj-card group flex justify-between items-center gap-4 py-4 px-5 rounded-xl" style="background:var(--s1); border:1px solid var(--b1);">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="num">04</span>
+                  <span class="tag text-xs">Fintech UX</span>
+                  <span class="tag text-xs">Banking App</span>
+                </div>
+                <div class="text-base font-bold mb-1" style="color:var(--t1);">IBK i-ONE Bank — 풀 뱅킹 UX 개선</div>
+                <div class="text-sm" style="color:var(--t2);">"나만의 은행" 개인화 · 메뉴 구조 재설계</div>
+              </div>
+              <span class="proj-link shrink-0">자세히 보기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon></span>
+            </a>
+            <a href="project/hana-bank.html" class="proj-card group flex justify-between items-center gap-4 py-4 px-5 rounded-xl" style="background:var(--s1); border:1px solid var(--b1);">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="num">05</span>
+                  <span class="tag text-xs">Fintech UX</span>
+                  <span class="tag text-xs">리뉴얼</span>
+                </div>
+                <div class="text-base font-bold mb-1" style="color:var(--t1);">KEB하나은행 — 모바일 뱅킹 리뉴얼</div>
+                <div class="text-sm" style="color:var(--t2);">금융 프로세스 단순화 · 가독성 개선 · 브랜드 재정립</div>
+              </div>
+              <span class="proj-link shrink-0">자세히 보기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOA Design -->
+      <div class="fade-up d4 py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2016 — 2017</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">DOA</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold mb-4" style="color:var(--t1);">UI/UX Designer</div>
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--t2);">패션·라이프스타일 브랜드 중심의 이커머스 에이전시. PC·모바일 웹·앱을 아우르는 커머스 UI 구축·제안·유지보수를 담당했습니다.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">에쎄 이커머스 PC</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">코벳블랑 모바일 웹</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">MCM M5 앱</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">위비스 이커머스</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">W컨셉 모바일</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">라푸마 모바일/웹</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">휠라·TBH·인터뷰스토어 프로모션</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NS홈쇼핑 -->
+      <div class="fade-up d4 py-10 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6">
+        <div class="pt-0.5">
+          <div class="text-xs font-semibold tracking-wider mb-1" style="color:var(--t3);">2013 — 2015</div>
+          <div class="text-sm font-semibold" style="color:var(--t2);">NS홈쇼핑</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold mb-4" style="color:var(--t1);">Web/UI Designer</div>
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--t2);">홈쇼핑 자사 서비스 고도화 및 프로모션 디자인 전담. 패션·마케팅·리빙 등 다양한 카테고리의 이벤트·프로모션 컨셉 기획부터 상세페이지 제작까지 담당했습니다.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">프로모션 디자인</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">적응형 배너 가이드</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">상품 상세페이지</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">마케팅 이벤트 기획</span>
+            <span class="tag text-xs" style="pointer-events:none; cursor:default;">PC·모바일 웹 최적화</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ─── SKILLS MARQUEE ───────────────────────── -->
+<div class="py-7 overflow-hidden" style="border-bottom:1px solid var(--b1);">
+  <div class="flex">
+    <div class="marquee-track flex gap-12 whitespace-nowrap items-center flex-shrink-0 pr-12">
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Figma</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">UX Research</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Design System</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">BX Strategy</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Sketch</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Adobe XD</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Zeplin</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Photoshop</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">금융 UX</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">이커머스</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">IA 설계</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Prototyping</span>
+      <!-- 복제 -->
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Figma</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">UX Research</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Design System</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">BX Strategy</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Sketch</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Adobe XD</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Zeplin</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Photoshop</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">금융 UX</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">이커머스</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">IA 설계</span>
+      <span style="color:var(--b2);">—</span>
+      <span style="color:var(--t3); font-size:.8rem; font-weight:500;">Prototyping</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ABOUT ─────────────────────────────────── -->
+<section id="about" class="py-24 px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16">
+
+    <div class="fade-up">
+      <span class="num block mb-4">003</span>
+      <h2 class="text-3xl font-bold tracking-tight" style="color:var(--t1);">About</h2>
+    </div>
+
+    <div class="space-y-10">
+
+      <p class="fade-up text-xl leading-relaxed" style="color:var(--t2);">
+        좋은 디자인은 사용자가 "왜 이렇게 쉽지?"라고 느끼는 순간에 완성됩니다.<br>
+        10년간 금융·리테일·이커머스에서 UX와 BX 양쪽을 모두 다뤄온
+        복합 전문가입니다.
+      </p>
+
+      <!-- 전문 역량 그리드 -->
+      <div class="fade-up d1 grid grid-cols-1 sm:grid-cols-2 gap-px" style="background:var(--b1);">
+        <div class="py-6 px-6" style="background:var(--bg);">
+          <div class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--t3);">UX Design</div>
+          <div class="space-y-1.5">
+            <div class="text-sm" style="color:var(--t2);">사용자 리서치 · IA 설계</div>
+            <div class="text-sm" style="color:var(--t2);">금융·커머스 플로우 최적화</div>
+            <div class="text-sm" style="color:var(--t2);">고충실도 프로토타이핑</div>
+          </div>
+        </div>
+        <div class="py-6 px-6" style="background:var(--bg);">
+          <div class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--t3);">BX Strategy</div>
+          <div class="space-y-1.5">
+            <div class="text-sm" style="color:var(--t2);">브랜드 아이덴티티 · Core Value</div>
+            <div class="text-sm" style="color:var(--t2);">리브랜딩 전략 · 콘셉트 도출</div>
+            <div class="text-sm" style="color:var(--t2);">온오프라인 브랜드 통합</div>
+          </div>
+        </div>
+        <div class="py-6 px-6" style="background:var(--bg);">
+          <div class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--t3);">Design System</div>
+          <div class="space-y-1.5">
+            <div class="text-sm" style="color:var(--t2);">컴포넌트 라이브러리 구축</div>
+            <div class="text-sm" style="color:var(--t2);">토큰 기반 디자인 규칙</div>
+            <div class="text-sm" style="color:var(--t2);">개발-디자인 핸드오프 최적화</div>
+          </div>
+        </div>
+        <div class="py-6 px-6" style="background:var(--bg);">
+          <div class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--t3);">Tools</div>
+          <div class="space-y-1.5">
+            <div class="text-sm" style="color:var(--t2);">Figma · Sketch · Adobe XD</div>
+            <div class="text-sm" style="color:var(--t2);">Photoshop · Illustrator</div>
+            <div class="text-sm" style="color:var(--t2);">Zeplin · FigJam</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ─── CONTACT ─────────────────────────────── -->
+<section id="contact" class="py-32 px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+
+    <div class="fade-up">
+      <span class="num block mb-6">005</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-8" style="color:var(--t1);">
+        좋은 제품은<br>함께 만드는 것
+      </h2>
+      <p class="text-lg leading-relaxed" style="color:var(--t2);">
+        프로젝트 의뢰, 협업 제안, 커피챗.<br>
+        어떤 이야기든 환영합니다.
+      </p>
+    </div>
+
+    <div class="fade-up d2 flex flex-col gap-4">
+      <a href="tel:01057575280" class="btn-primary text-lg py-5 px-8 rounded-xl justify-between group">
+        <span class="flex items-center gap-3">
+          <iconify-icon icon="solar:phone-bold" width="22"></iconify-icon>
+          010-5757-5280
+        </span>
+        <iconify-icon icon="solar:arrow-right-up-linear" width="20" class="opacity-40 group-hover:opacity-100 transition-opacity"></iconify-icon>
+      </a>
+      <a href="mailto:qhgml27@gmail.com" class="btn-ghost text-lg py-5 px-8 rounded-xl justify-between group">
+        <span class="flex items-center gap-3">
+          <iconify-icon icon="solar:letter-linear" width="22"></iconify-icon>
+          qhgml27@gmail.com
+        </span>
+        <iconify-icon icon="solar:arrow-right-up-linear" width="20" class="opacity-30 group-hover:opacity-80 transition-opacity"></iconify-icon>
+      </a>
+      <p class="text-xs text-center pt-2" style="color:var(--t3);">평균 24시간 이내 회신</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────── -->
+<footer class="py-6 px-6 lg:px-8 border-t" style="border-color:var(--b1);">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+    <span class="text-sm font-bold" style="color:var(--t3);">LEEBOHEE — Product Designer</span>
+    <span class="text-xs" style="color:var(--t3);">© 2024 LEE BOHEE. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- ─── STICKY BAR ───────────────────────────── -->
+<div id="sbar" class="fixed bottom-0 inset-x-0 z-50 border-t" style="border-color:var(--b1); background:rgba(8,8,8,.92); backdrop-filter:blur(16px);">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+    <span class="text-sm font-semibold hidden sm:block" style="color:var(--t2);">LEEBOHEE</span>
+    <div class="flex gap-3 w-full sm:w-auto">
+      <a href="tel:01057575280" class="btn-primary flex-1 sm:flex-none justify-center py-3 text-sm rounded-lg">
+        <iconify-icon icon="solar:phone-bold" width="15"></iconify-icon>
+        전화하기
+      </a>
+      <a href="mailto:qhgml27@gmail.com" class="btn-ghost flex-1 sm:flex-none justify-center py-3 text-sm rounded-lg">
+        <iconify-icon icon="solar:letter-linear" width="15"></iconify-icon>
+        메일 보내기
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  const hero = document.querySelector('section');
+  const sbar = document.getElementById('sbar');
+  const sio = new IntersectionObserver(([e]) => {
+    sbar.classList.toggle('show', !e.isIntersecting);
+  }, { threshold: 0.15 });
+  sio.observe(hero);
+</script>
+</body>
+</html>
