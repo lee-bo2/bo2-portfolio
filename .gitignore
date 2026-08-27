@@ -7,3 +7,6 @@ resume*.md
 
 # 로컬 툴링
 .claude/
+
+# 대안 디자인 초안 — 로컬 보관 (public 레포/Pages에 노출 방지)
+portfolio.html
