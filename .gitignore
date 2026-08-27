@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# 개인 문서 — 레포가 public이므로 커밋 금지
+경력기술서.md
+resume*.md
+
+# 로컬 툴링
+.claude/
